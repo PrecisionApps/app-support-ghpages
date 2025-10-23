@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{App} Support</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{App} support: FAQs, troubleshooting, billing, and contact.">
+<link rel="icon" href="/favicon.ico">
+<style>
+  :root {--bg:#0b0b10;--fg:#e8e8ef;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12);}
+  *{box-sizing:border-box} body{font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;margin:0;background:var(--bg);color:var(--fg)}
+  .wrap{max-width:980px;margin:0 auto;padding:48px 20px}
+  h1{font-size:2rem;margin:0 0 .5em} h2{font-size:1.25rem;margin:2rem 0 .5rem} p{margin:.4rem 0}
+  a{color:#9ecbff;text-decoration:none} a:hover{text-decoration:underline}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--line)}
+  details{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+  .muted{opacity:.8} footer{margin-top:32px;opacity:.7}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How do I restore purchases?","acceptedAnswer":{"@type":"Answer","text":"Open {App} → Settings → Restore Purchases. Make sure you’re signed into the same Apple ID used for the original purchase."}},
+    {"@type":"Question","name":"How do I cancel a subscription?","acceptedAnswer":{"@type":"Answer","text":"Open iOS Settings → [Your Name] → Subscriptions, or visit https://reportaproblem.apple.com/ to manage or request refunds."}},
+    {"@type":"Question","name":"App crashed or won’t open","acceptedAnswer":{"@type":"Answer","text":"Update to the latest version, reboot the device, ensure storage > 1 GB free, and try reinstalling. If it persists, contact us with device model and iOS version."}}
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>{App} Support</h1>
+    <p class="muted">Fast answers, billing links, and a direct line to our team.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:support@yourdomain.com?subject={App}%20Support">support@yourdomain.com</a></p>
+        <p><a class="btn" href="https://tally.so/r/your-form-id">Open Support Form</a></p>
+      </div>
+      <div class="card">
+        <h2>Billing & Refunds</h2>
+        <p>Manage, cancel, or refund via Apple:</p>
+        <p><a class="btn" href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a></p>
+        <p class="muted">We can’t cancel App Store subscriptions on your behalf.</p>
+      </div>
+      <div class="card">
+        <h2>Quick Links</h2>
+        <p><a href="https://apps.apple.com/account/subscriptions">Apple Subscriptions</a></p>
+        <p><a href="https://yourdomain.com/privacy">Privacy Policy</a> · <a href="https://yourdomain.com/terms">Terms of Use</a></p>
+      </div>
+    </div>
+
+    <h2>Top FAQs</h2>
+    <details><summary>How do I restore purchases?</summary><p>Open {App} → Settings → Restore Purchases.</p></details>
+    <details><summary>Cancel subscription?</summary><p>Use iOS Settings → [Your Name] → Subscriptions or <a href="https://reportaproblem.apple.com/">Report a Problem</a>.</p></details>
+    <details><summary>App won’t open / crashes</summary><p>Update app/iOS, reboot, ensure free space, reinstall. Then email us with device + iOS.</p></details>
+
+    <h2>Contact Form</h2>
+    <p>If you prefer a form: <a href="https://tally.so/r/your-form-id">Support Request</a></p>
+
+    <h2>Legal</h2>
+    <p><a href="https://yourdomain.com/privacy">Privacy Policy</a> · <a href="https://yourdomain.com/terms">Terms of Use</a></p>
+
+    <footer>© 2025 {Company}. All rights reserved.</footer>
+  </div>
+</body>
+</html>
