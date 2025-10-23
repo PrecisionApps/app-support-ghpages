@@ -2,70 +2,356 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>{App} Support</title>
+<title>Eject The Water - Support</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{App} support: FAQs, troubleshooting, billing, and contact.">
+<meta name="description" content="Eject The Water support: FAQs, troubleshooting, and contact information for the water ejection app.">
 <link rel="icon" href="/favicon.ico">
 <style>
-  :root {--bg:#0b0b10;--fg:#e8e8ef;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12);}
-  *{box-sizing:border-box} body{font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;margin:0;background:var(--bg);color:var(--fg)}
-  .wrap{max-width:980px;margin:0 auto;padding:48px 20px}
-  h1{font-size:2rem;margin:0 0 .5em} h2{font-size:1.25rem;margin:2rem 0 .5rem} p{margin:.4rem 0}
-  a{color:#9ecbff;text-decoration:none} a:hover{text-decoration:underline}
-  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
-  .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--line)}
-  details{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
-  .muted{opacity:.8} footer{margin-top:32px;opacity:.7}
+  :root {
+    --bg: linear-gradient(135deg, #0a1628 0%, #0d1b2a 50%, #1b263b 100%);
+    --fg: #e8f4f8;
+    --accent: #4fc3f7;
+    --accent-hover: #29b6f6;
+    --card: rgba(79, 195, 247, 0.08);
+    --card-hover: rgba(79, 195, 247, 0.12);
+    --line: rgba(79, 195, 247, 0.2);
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Inter, Helvetica, Arial, sans-serif;
+    background: #0a1628;
+    background: var(--bg);
+    color: var(--fg);
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(79, 195, 247, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(41, 182, 246, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  
+  .app-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 4px 12px rgba(79, 195, 247, 0.4));
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 12px;
+    background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+    opacity: 0.85;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 48px 0 24px;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+  
+  p {
+    margin: 12px 0;
+    line-height: 1.7;
+  }
+  
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 32px;
+  }
+  
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px var(--shadow);
+  }
+  
+  .card:hover {
+    background: var(--card-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+  
+  .card h2 {
+    margin: 0 0 16px;
+    font-size: 1.25rem;
+  }
+  
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 14px;
+    border: 1px solid var(--accent);
+    background: rgba(79, 195, 247, 0.1);
+    color: var(--accent);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+  }
+  
+  .btn:hover {
+    background: var(--accent);
+    color: #0a1628;
+    text-decoration: none;
+    transform: scale(1.02);
+  }
+  
+  details {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 12px 0;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease;
+  }
+  
+  details:hover {
+    background: var(--card-hover);
+  }
+  
+  details[open] {
+    background: var(--card-hover);
+  }
+  
+  summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--accent);
+    list-style: none;
+    user-select: none;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  summary::before {
+    content: '▶';
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+  
+  details p {
+    margin-top: 12px;
+    padding-left: 20px;
+    opacity: 0.9;
+  }
+  
+  .muted {
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+  
+  footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .wrap {
+      padding: 48px 20px;
+    }
+  }
 </style>
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"How do I restore purchases?","acceptedAnswer":{"@type":"Answer","text":"Open {App} → Settings → Restore Purchases. Make sure you’re signed into the same Apple ID used for the original purchase."}},
-    {"@type":"Question","name":"How do I cancel a subscription?","acceptedAnswer":{"@type":"Answer","text":"Open iOS Settings → [Your Name] → Subscriptions, or visit https://reportaproblem.apple.com/ to manage or request refunds."}},
-    {"@type":"Question","name":"App crashed or won’t open","acceptedAnswer":{"@type":"Answer","text":"Update to the latest version, reboot the device, ensure storage > 1 GB free, and try reinstalling. If it persists, contact us with device model and iOS version."}}
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the water ejection work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eject The Water uses low-frequency sound waves to vibrate and push water out of your device's speaker grills. Simply tap the eject button and let the app play the sound sequence for 30-60 seconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe for my device?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely safe. The app uses the same frequency range as Apple Watch's water ejection feature. It won't damage your speakers or device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I restore purchases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open Eject The Water → Settings → Restore Purchases. Make sure you're signed into the same Apple ID used for the original purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open iOS Settings → [Your Name] → Subscriptions, or visit https://reportaproblem.apple.com/ to manage or request refunds."
+      }
+    }
   ]
 }
 </script>
 </head>
 <body>
   <div class="wrap">
-    <h1>{App} Support</h1>
-    <p class="muted">Fast answers, billing links, and a direct line to our team.</p>
+    <header>
+      <div class="app-icon">💧</div>
+      <h1>Eject The Water</h1>
+      <p class="subtitle">Support & Help Center</p>
+    </header>
 
     <div class="grid">
       <div class="card">
+        <span class="card-icon">📧</span>
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:support@yourdomain.com?subject={App}%20Support">support@yourdomain.com</a></p>
-        <p><a class="btn" href="https://tally.so/r/your-form-id">Open Support Form</a></p>
+        <p>Need help? Reach out directly:</p>
+        <p><strong>Email:</strong><br><a href="mailto:kaanyildiz.iosdev@gmail.com?subject=Eject%20The%20Water%20Support">kaanyildiz.iosdev@gmail.com</a></p>
+        <p class="muted">Developer: Kaan YILDIZ</p>
       </div>
+      
       <div class="card">
+        <span class="card-icon">💳</span>
         <h2>Billing & Refunds</h2>
-        <p>Manage, cancel, or refund via Apple:</p>
-        <p><a class="btn" href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a></p>
-        <p class="muted">We can’t cancel App Store subscriptions on your behalf.</p>
+        <p>Manage subscriptions or request refunds through Apple:</p>
+        <a class="btn" href="https://reportaproblem.apple.com/" target="_blank" rel="noopener">Report a Problem</a>
+        <p class="muted">Note: Subscriptions are managed by Apple. We cannot cancel them directly.</p>
       </div>
+      
       <div class="card">
+        <span class="card-icon">🔗</span>
         <h2>Quick Links</h2>
-        <p><a href="https://apps.apple.com/account/subscriptions">Apple Subscriptions</a></p>
-        <p><a href="https://yourdomain.com/privacy">Privacy Policy</a> · <a href="https://yourdomain.com/terms">Terms of Use</a></p>
+        <p><a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Manage Apple Subscriptions</a></p>
+        <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use (EULA)</a></p>
+        <p class="muted">Privacy: We don't collect personal data.</p>
       </div>
     </div>
 
-    <h2>Top FAQs</h2>
-    <details><summary>How do I restore purchases?</summary><p>Open {App} → Settings → Restore Purchases.</p></details>
-    <details><summary>Cancel subscription?</summary><p>Use iOS Settings → [Your Name] → Subscriptions or <a href="https://reportaproblem.apple.com/">Report a Problem</a>.</p></details>
-    <details><summary>App won’t open / crashes</summary><p>Update app/iOS, reboot, ensure free space, reinstall. Then email us with device + iOS.</p></details>
+    <h2>Frequently Asked Questions</h2>
+    
+    <details>
+      <summary>How does the water ejection work?</summary>
+      <p>Eject The Water uses low-frequency sound waves (165Hz) to vibrate and push water out of your device's speaker grills. Simply tap the eject button and let the app play the sound sequence for 30-60 seconds. Make sure your volume is turned up for best results.</p>
+    </details>
+    
+    <details>
+      <summary>Is it safe for my device?</summary>
+      <p>Yes, completely safe! The app uses the same frequency range as Apple Watch's built-in water ejection feature. It won't damage your speakers or device. The sound is designed specifically for this purpose.</p>
+    </details>
+    
+    <details>
+      <summary>My device still has water after using the app</summary>
+      <p>Try running the ejection sequence 2-3 times. Gently shake your device with the speaker facing down between cycles. For stubborn water, let your device air dry in a well-ventilated area for a few hours.</p>
+    </details>
+    
+    <details>
+      <summary>How do I restore purchases?</summary>
+      <p>Open Eject The Water → Settings (gear icon) → Restore Purchases. Make sure you're signed into the same Apple ID used for the original purchase. If issues persist, contact support.</p>
+    </details>
+    
+    <details>
+      <summary>How do I cancel my subscription?</summary>
+      <p>Open iOS Settings → [Your Name] → Subscriptions → Eject The Water → Cancel Subscription. Or visit <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> to manage subscriptions and request refunds.</p>
+    </details>
+    
+    <details>
+      <summary>App won't open or crashes</summary>
+      <p>Try these steps: 1) Update to the latest version from the App Store, 2) Restart your device, 3) Ensure you have at least 1GB of free storage, 4) Reinstall the app. If the problem persists, email us with your device model and iOS version.</p>
+    </details>
+    
+    <details>
+      <summary>Does this work on all devices?</summary>
+      <p>Yes! Eject The Water works on all iOS devices with speakers (iPhone, iPad). It's most effective on devices with stereo speakers. Results may vary based on how much water is present and device orientation.</p>
+    </details>
 
-    <h2>Contact Form</h2>
-    <p>If you prefer a form: <a href="https://tally.so/r/your-form-id">Support Request</a></p>
-
-    <h2>Legal</h2>
-    <p><a href="https://yourdomain.com/privacy">Privacy Policy</a> · <a href="https://yourdomain.com/terms">Terms of Use</a></p>
-
-    <footer>© 2025 {Company}. All rights reserved.</footer>
+    <footer>
+      <p>© 2025 Kaan YILDIZ. All rights reserved.</p>
+      <p class="muted">Eject The Water is not affiliated with Apple Inc.</p>
+    </footer>
   </div>
 </body>
 </html>
