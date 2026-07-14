@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Haven — Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy Policy for Haven — a private space for the people who matter most.">
+<style>
+  :root {
+    --bg: #17110F;
+    --fg: #F3E9DF;
+    --muted: rgba(243, 233, 223, 0.72);
+    --accent: #E8B07C;
+    --accent-soft: #F0C79B;
+    --rose: #E2908C;
+    --card: rgba(232, 176, 124, 0.07);
+    --line: rgba(232, 176, 124, 0.22);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(circle at 50% 12%, rgba(232, 176, 124, 0.14) 0%, transparent 55%),
+      radial-gradient(circle at 80% 90%, rgba(226, 144, 140, 0.08) 0%, transparent 50%);
+    pointer-events: none; z-index: 0;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px; position: relative; z-index: 1; }
+  header { text-align: center; margin-bottom: 40px; }
+  .orb {
+    width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%;
+    background: radial-gradient(circle at 42% 38%, #FFEBCE 0%, #F0C79B 42%, #E8B07C 70%, rgba(232,176,124,0) 100%);
+    box-shadow: 0 0 44px rgba(232, 176, 124, 0.55);
+  }
+  h1 {
+    font-family: 'New York', 'Iowan Old Style', Palatino, Georgia, serif;
+    font-size: 2.1rem; font-weight: 600; letter-spacing: -0.01em; color: var(--accent-soft);
+  }
+  .subtitle { color: var(--muted); margin-top: 6px; }
+  h2 {
+    font-family: 'New York', 'Iowan Old Style', Palatino, Georgia, serif;
+    font-size: 1.25rem; margin: 30px 0 10px; color: var(--accent); font-weight: 600;
+  }
+  p, li { margin: 10px 0; color: var(--fg); }
+  ul { padding-left: 22px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-soft); text-decoration: underline; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 22px;
+    padding: 28px; box-shadow: 0 5px 5px rgba(0,0,0,0.35), 0 18px 40px rgba(0,0,0,0.28);
+  }
+  footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="orb" role="presentation"></div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Haven — a private space for the people who matter most</p>
+    </header>
+
+    <div class="card">
+      <h2>The short version</h2>
+      <p>Haven is private by construction. Your memories live on your device and in your own iCloud — we run no servers, we cannot read your content, and we collect nothing about you. There are no analytics, no ads, no trackers, and no third-party SDKs in the app.</p>
+
+      <h2>What Haven stores, and where</h2>
+      <ul>
+        <li><strong>Your memories</strong> — capsules, Vault entries, glows, photos, and voice notes are stored locally on your device.</li>
+        <li><strong>iCloud sync</strong> — if iCloud is available, Haven syncs your haven through <em>your own private iCloud database</em> using Apple's CloudKit. The people you invite access it through Apple's private sharing. We operate no server of our own and have no ability to access, read, or decrypt what you keep in your haven.</li>
+        <li><strong>Invite codes</strong> — when you invite someone, Haven publishes a minimal lookup record (the six-character code mapped to an Apple sharing link). It contains no memory content and no personal information.</li>
+      </ul>
+
+      <h2>Photos and microphone</h2>
+      <p>Photos you pick and voice notes you record become part of your capsules — nothing else. They stay on your device and in your private iCloud. They are never uploaded to us or to any third party.</p>
+
+      <h2>Notifications</h2>
+      <p>Haven sends gentle local notifications — when a sealed capsule is ready to open, when something warm arrives from your circle, and occasional reminders you can ignore. Remote push signals are used only to let your device know your iCloud data changed; they carry no content we can read.</p>
+
+      <h2>Analytics and tracking</h2>
+      <p>None. Haven contains no third-party analytics, no advertising identifiers, and no tracking of any kind.</p>
+
+      <h2>Purchases and subscriptions</h2>
+      <p>Billing is handled entirely by Apple. We never see your payment details. To manage or refund a subscription, visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> or your Apple ID subscription settings.</p>
+
+      <h2>Your data, your control</h2>
+      <ul>
+        <li>You can export a complete backup of your haven from inside the app at any time.</li>
+        <li>Deleting the app removes its local data from your device.</li>
+        <li>Data synced to iCloud belongs to your Apple account and can be managed through iCloud settings.</li>
+      </ul>
+
+      <h2>Children's privacy</h2>
+      <p>Haven is not directed to children under 13, and we do not knowingly collect personal data from children.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes in any material way, the change will be reflected on this page.</p>
+
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:kaanyildiz.iosdev@gmail.com?subject=Haven%20Privacy">kaanyildiz.iosdev@gmail.com</a></p>
+    </div>
+
+    <footer>
+      <p>© 2026 Kaan YILDIZ. All rights reserved.</p>
+      <p><a href="./">Support</a> · <a href="privacy">Privacy Policy</a></p>
+      <p>Haven is not affiliated with Apple Inc.</p>
+    </footer>
+  </div>
+</body>
+</html>

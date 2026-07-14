@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Haven — Support</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Support for Haven — a private space for the people who matter most.">
+<style>
+  :root {
+    --bg: #17110F;
+    --fg: #F3E9DF;
+    --muted: rgba(243, 233, 223, 0.72);
+    --accent: #E8B07C;
+    --accent-soft: #F0C79B;
+    --card: rgba(232, 176, 124, 0.07);
+    --line: rgba(232, 176, 124, 0.22);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--fg); min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(circle at 50% 12%, rgba(232, 176, 124, 0.14) 0%, transparent 55%),
+      radial-gradient(circle at 80% 90%, rgba(226, 144, 140, 0.08) 0%, transparent 50%);
+    pointer-events: none; z-index: 0;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px; position: relative; z-index: 1; }
+  header { text-align: center; margin-bottom: 40px; }
+  .orb {
+    width: 72px; height: 72px; margin: 0 auto 18px; border-radius: 50%;
+    background: radial-gradient(circle at 42% 38%, #FFEBCE 0%, #F0C79B 42%, #E8B07C 70%, rgba(232,176,124,0) 100%);
+    box-shadow: 0 0 48px rgba(232, 176, 124, 0.55);
+  }
+  h1 {
+    font-family: 'New York', 'Iowan Old Style', Palatino, Georgia, serif;
+    font-size: 2.2rem; font-weight: 600; color: var(--accent-soft);
+  }
+  .subtitle { color: var(--muted); margin-top: 8px; }
+  h2 {
+    font-family: 'New York', 'Iowan Old Style', Palatino, Georgia, serif;
+    font-size: 1.2rem; margin: 26px 0 10px; color: var(--accent); font-weight: 600;
+  }
+  p { margin: 10px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-soft); text-decoration: underline; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 22px;
+    padding: 28px; box-shadow: 0 5px 5px rgba(0,0,0,0.35), 0 18px 40px rgba(0,0,0,0.28);
+  }
+  .cta {
+    display: inline-block; margin-top: 8px; padding: 12px 22px; border-radius: 999px;
+    background: var(--accent); color: #2A1A0E; font-weight: 600;
+  }
+  .cta:hover { background: var(--accent-soft); color: #2A1A0E; text-decoration: none; }
+  footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="orb" role="presentation"></div>
+      <h1>Haven</h1>
+      <p class="subtitle">A private space for the people who matter most — keep your shared memories warm.</p>
+    </header>
+
+    <div class="card">
+      <h2>Need a hand?</h2>
+      <p>We read every message. Write to us and we'll get back to you as soon as we can.</p>
+      <a class="cta" href="mailto:kaanyildiz.iosdev@gmail.com?subject=Haven%20Support">Email support</a>
+
+      <h2>Common questions</h2>
+      <p><strong>How do I invite someone?</strong> Open the Circle tab and share your six-character invite code. A haven holds up to four people.</p>
+      <p><strong>Where are my memories stored?</strong> On your device, and — when iCloud is available — in your own private iCloud. We run no servers and can never read your content.</p>
+      <p><strong>How do I back up my haven?</strong> In the Circle tab, under “Keeping your memories,” you can export a complete backup file and restore it on any device.</p>
+      <p><strong>How do I manage my subscription?</strong> Subscriptions are billed by Apple — manage or cancel anytime in Settings → Apple ID → Subscriptions.</p>
+    </div>
+
+    <footer>
+      <p>© 2026 Kaan YILDIZ. All rights reserved.</p>
+      <p><a href="privacy">Privacy Policy</a></p>
+      <p>Haven is not affiliated with Apple Inc.</p>
+    </footer>
+  </div>
+</body>
+</html>
