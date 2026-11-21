@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glidepath — Support</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Help and support for Glidepath, the GLP-1 shot and level tracker for iPhone and iPad.">
+<style>
+  :root { --bg:#FAF5EE; --surface:#FFFFFF; --ink:#2B1D17; --muted:#5E4C43; --faint:#7A695F; --anchor:#DC4A1F; --soft:#FBE2D6; --line:#E6DCD0; --pine:#1E6B5C; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#17120F; --surface:#221B17; --ink:#F7EFE8; --muted:#B9A99D; --faint:#8C7C71; --anchor:#FF8259; --soft:#45281C; --line:#3A302A; --pine:#66CDB6; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font: 17px/1.6 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); min-height: 100vh; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 20px 40px; }
+  header { margin-bottom: 32px; }
+  .mark { width: 132px; height: 44px; display: block; margin-bottom: 20px; }
+  .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--anchor); }
+  h1 { font-family: 'New York', 'Iowan Old Style', Palatino, Georgia, serif; font-size: 2.1rem; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; margin-top: 6px; }
+  .lede { color: var(--muted); margin-top: 10px; }
+  h2 { font-size: 1.05rem; font-weight: 600; margin: 28px 0 6px; }
+  p, li { color: var(--muted); margin: 6px 0; }
+  ul, ol { padding-left: 22px; }
+  a { color: var(--anchor); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .sheet { background: var(--surface); border-radius: 22px; padding: 8px 24px 24px; }
+  .updated { color: var(--faint); font-size: 0.85rem; margin-top: 24px; }
+  footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--faint); font-size: 0.85rem; }
+  footer p { color: var(--faint); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <svg class="mark" viewBox="0 0 132 44" role="img" aria-label="Glidepath curve"><path d="M2 40 C 10 40, 16 6, 28 6 C 52 6, 78 34, 130 38" fill="none" stroke="var(--anchor)" stroke-width="3" stroke-linecap="round"/><circle cx="58" cy="19.5" r="5" fill="var(--anchor)" stroke="var(--bg)" stroke-width="2.5"/></svg>
+      <p class="eyebrow">Glidepath · Support</p>
+      <h1>Always know where you are in your week.</h1>
+      <p class="lede">Glidepath logs your GLP-1 shots, rotates your injection sites, estimates your medication level hour by hour, and shows which days side effects and food noise come back.</p>
+    </header>
+    <div class="sheet">
+      <h2>Get help</h2>
+      <p>Email <a href="mailto:kaanyildiz.iosdev@gmail.com?subject=Glidepath%20Support">kaanyildiz.iosdev@gmail.com</a>. Include your iPhone or iPad model and iOS version, and what you expected to happen. You'll normally hear back within two working days.</p>
+      <h2>How is my medication level estimated?</h2>
+      <p>Glidepath draws the curve from the doses you log and the published half-life of your medication. It is an estimate of where you are in your week, not a blood measurement, and it never tells you what dose to take.</p>
+      <h2>I took my shot late, or on a different day.</h2>
+      <p>Log the shot with the date and time you actually took it. Your curve, your next shot day and your reminders follow the shot you logged.</p>
+      <h2>How do I change my medication, dose or shot day?</h2>
+      <p>Open Settings → Your plan. Shots you already logged keep the dose you logged them with.</p>
+      <h2>My reminders aren't arriving.</h2>
+      <p>Open Settings → Reminders. If you see “Notifications are off for Glidepath”, tap Open iOS Settings and allow notifications, then turn the reminders you want back on.</p>
+      <h2>How does Apple Health sync work?</h2>
+      <p>Turn on Settings → Apple Health → Sync weight with Apple Health. Weights you log are saved to Health, and weights from Health are added to your trend. Glidepath reads and writes Weight only.</p>
+      <h2>How do I get the report for my doctor?</h2>
+      <p>Open Trends and tap Report for your doctor. It builds a PDF of your shots, weight trend and side effects that you can share or print. The report is part of the Glidepath plan.</p>
+      <h2>How do I restore my plan on a new iPhone?</h2>
+      <p>Open Settings → Subscription → Restore purchases while signed in to the Apple Account you subscribed with.</p>
+      <h2>How do I cancel?</h2>
+      <p>Open Settings → Subscription → Manage subscription, or iOS Settings → your name → Subscriptions. Cancel at least 24 hours before the renewal date to avoid the next charge.</p>
+      <h2>How do I delete my data?</h2>
+      <p>Settings → Your data → Delete all logs removes every entry from this device. Deleting the app removes everything Glidepath stored.</p>
+    </div>
+    <footer>
+      <p>© 2026 Kaan YILDIZ. All rights reserved.</p>
+      <p><a href="./">Support</a> · <a href="privacy">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></p>
+      <p>Glidepath is a personal log. It doesn't give medical advice and it doesn't replace your prescriber's instructions. Glidepath is not affiliated with Apple Inc. or with any medication manufacturer.</p>
+    </footer>
+  </div>
+</body>
+</html>
